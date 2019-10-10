@@ -2,7 +2,7 @@ This chapter provides detailed specifications of the system under development.
 
 \section{Functional Requirements}
 
-This section describes each function/feature provided by our system. These functions are logically grouped into modules based on their purpose/users/mode of operations etc (as per our system). A functional hierarchy may look like:
+This section describes each function/feature provided by our system. These functions are logically grouped into modules based on their purposes. The users in our system are categorized as client (is able to sell), customer (is able to buy) and administrator.
 \subsection*{Module 1: Registrations}
 \begin{outline}
     \1 \textbf{Function 1: Register an account} \\
@@ -16,51 +16,51 @@ This section describes each function/feature provided by our system. These funct
 \begin{outline}
     \1 \textbf{Function 1: Only client type users can upload item(s) to sell} \\
     A registered client can upload an item to sell through the mobile application. The system prompts the client for item photos, item category and item details and the item is added to the item inventory.
-    \1 \textbf{Function 2: Add item to cart}\\
+    \1 \textbf{Function 2: Add item to cart} \\
     A certain button on the item page prompts the system to add the item to the user's cart. All consequent item(s) added without checkout, are added to the same cart unless cleared.
-    \1 \textbf{Function 3: Clear item from cart}\\
+    \1 \textbf{Function 3: Clear item from cart} \\
     The system allows the user to remove a previously added item from the cart. If cart is empty, the checkout link is no longer accessible.
 \end{outline}
 \subsection*{Module 3: Order Handling}
 \begin{outline}
-    \1 \textbf{Function 1: Place an order}\\
+    \1 \textbf{Function 1: Place an order} \\
     The system allows the user to checkout when there is one or more quantity of item(s) in the cart. The checkout button prompts the system to do a user check. The next operation depends on whether the user is registered or unregistered. Once an order is placed, the client for the particular product(s) receives notifications with the order details and a suitable time-frame.
-        \2 \textbf{Function 1a: Place order as a registered user}\\
+        \2 \textbf{Function 1a: Place order as a registered user} \\
         The system requests the user to enter new, or choose preexisting billing and delivery information. The order is then placed and assigned a unique order number for later use.
-        \2 \textbf{Function 1b: Place order as an unregistered user}\\
+        \2 \textbf{Function 1b: Place order as an unregistered user} \\
         The system requests the user to register. The process in Module 1, Function 1b is carried out. This is followed by the system prompting the user for billing and delivery information. The order is then placed and assigned a unique order number for later use.
-    \1 \textbf{Function 2: Cancel an existing order}\\
+    \1 \textbf{Function 2: Cancel an existing order} \\
     The system lets a user cancel an existing order if it is not yet dispatched. The system checks the status against the order number. If it meets the case, the order is removed from the database and the client receives notifications of order cancellation.
     \1 \textbf{Function 3: The user can provide different billing and shipping addresses for an order}\\
     The system lets user decide billing and shipping addresses differently, with older ones as default selected option(s). The system stores the order such that once it is billed for, it is delivered to the recipient.
 \end{outline}
 \subsection*{Module 4: Delivery System}
 \begin{outline}
-    \1 \textbf{Function 1: Customer and client are notified of order delivery status}\\
+    \1 \textbf{Function 1: Customer and client are notified of order delivery status} \\
     The client is notified of an incoming order and it is stored in their portal as an ongoing order, not yet collected. Once collected by the rider, it is confirmed as such. The admin receives the notification and is prepared to receive the order for quality assurance. Once it leaves the admin, the user is notified that the order has been dispatched and is to be expected. The user receives the order, it is confirmed by the rider, and the order delivery is complete.
 \end{outline}
 \subsection*{Module 5: Admin Portal}
 \begin{outline}
-    \1 \textbf{Function 1: Admin can remove items from the database}\\
+    \1 \textbf{Function 1: Admin can remove items from the database} \\
     If a certain item does not fit the website's criteria for product, admin can remove it from the website. The client is notified that the order has been removed since it does not comply with our standards.
 \end{outline}
 \subsection*{Module 6: User Account Portal}
 \begin{outline}
-    \1 \textbf{Function 1: User can change billing and shipping information}\\
+    \1 \textbf{Function 1: User can change billing and shipping information} \\
     Previous billing and shipping address can be deleted. The system removes information from its database. User can then choose to add a new set of information that is updated in our database.
     \1 \textbf{Function 2: User can change notification settings}
-        \2 \textbf{Function 2a: Promotional notifications can be turned off}\\
+        \2 \textbf{Function 2a: Promotional notifications can be turned off} \\
         User notifications for promotions are sent via email. They can be turned off via the portal. User is removed from mailing list. Upon next login session user is reminded to turn on their promotional emails.
-        \2 \textbf{Function 2b: Order notifications must be turned on for at least one medium}
+        \2 \textbf{Function 2b: Order notifications must be turned on for at least one medium} \\
         User receives order notifications through email and phone. This can be turned off through the portal, however, user must have at least one active notification medium for orders.
-    \1 \textbf{Function 3: User can retrieve order history}\\
+    \1 \textbf{Function 3: User can retrieve order history} \\
     User can access order history through account portal. The order contains details relevant to order.
 \end{outline}
 \subsection*{Module 7: Shop Handler}
 \begin{outline}
-    \1 \textbf{Function 1: Registered clients can create a shop}\\
+    \1 \textbf{Function 1: Registered clients can create a shop} \\
     On account registration as a client, system responds with a page where client can create a shop. Shop handles all client data with regards to buying and selling products. The shop creation requires the client to enter an Address and Phone Number. The system verifies the shop upon admin approval, and clients can then start selling.
-    \1 \textbf{Function 2: Registered clients can change shop details}\\
+    \1 \textbf{Function 2: Registered clients can change shop details} \\
     The client can change shop address and number through the shop portal inside their account. This cannot be done during an ongoing order on the current shop. Once all orders from the current shop are delivered, only then client can change shop details.
 \end{outline}
 
@@ -91,7 +91,7 @@ This section describes each function/feature provided by our system. These funct
 \subsection*{Verification:}
 \begin{outline}
     \1 Email verification API should be deployed
-    \2 Client has to be verified through contact before email verification
+    \1 Client has to be verified through contact before email verification
 \end{outline}
 
 \subsection*{Documentation:}
