@@ -3,6 +3,7 @@ This chapter provides detailed specifications of the system under development.
 \section{Functional Requirements}
 
 This section describes each function/feature provided by our system. These functions are logically grouped into modules based on their purposes. The users in our system are categorized as client (is able to sell), customer (is able to buy) and administrator.
+
 \subsection*{Module 1: Registrations}
 \begin{outline}
     \1 \textbf{Function 1: Register an account} \\
@@ -12,6 +13,7 @@ This section describes each function/feature provided by our system. These funct
         \2 \textbf{Function 1b: Register as a customer} \\
         The register form prompts the user to enter their details i.e. Name, Email, Password. The form is submitted and an unverified customer account is created. The user receives a link on their email address which completes account verification.
 \end{outline}
+
 \subsection*{Module 2: Buying and Selling}
 \begin{outline}
     \1 \textbf{Function 1: Only client type users can upload item(s) to sell} \\
@@ -21,6 +23,7 @@ This section describes each function/feature provided by our system. These funct
     \1 \textbf{Function 3: Clear item from cart} \\
     The system allows the user to remove a previously added item from the cart. If cart is empty, the checkout link is no longer accessible.
 \end{outline}
+
 \subsection*{Module 3: Order Handling}
 \begin{outline}
     \1 \textbf{Function 1: Place an order} \\
@@ -34,11 +37,13 @@ This section describes each function/feature provided by our system. These funct
     \1 \textbf{Function 3: The user can provide different billing and shipping addresses for an order}\\
     The system lets user decide billing and shipping addresses differently, with older ones as default selected option(s). The system stores the order such that once it is billed for, it is delivered to the recipient.
 \end{outline}
+
 \subsection*{Module 4: Delivery System}
 \begin{outline}
     \1 \textbf{Function 1: Customer and client are notified of order delivery status} \\
     The client is notified of an incoming order and it is stored in their portal as an ongoing order, not yet collected. Once collected by the rider, it is confirmed as such. The admin receives the notification and is prepared to receive the order for quality assurance. Once it leaves the admin, the user is notified that the order has been dispatched and is to be expected. The user receives the order, it is confirmed by the rider, and the order delivery is complete.
 \end{outline}
+
 \subsection*{Module 5: Admin Portal}
 \begin{outline}
     \1 \textbf{Function 1: Admin can remove items from the database} \\
@@ -56,6 +61,7 @@ This section describes each function/feature provided by our system. These funct
     \1 \textbf{Function 3: User can retrieve order history} \\
     User can access order history through account portal. The order contains details relevant to order.
 \end{outline}
+
 \subsection*{Module 7: Shop Handler}
 \begin{outline}
     \1 \textbf{Function 1: Registered clients can create a shop} \\
@@ -137,7 +143,7 @@ This section includes our mockup screens and briefly explains them.
 This section describes the library or API interface to our system.
 
 \subsection{Hardware/Communication Interfaces}
-This section describes our project's specific hardware/network interfaces.
+For \textbf{Hardware Interfaces}, the Web Application would require hardware used to connect to the internet. The Mobile Application would require hardware that supports Android Operating System and internet connectivity. \\ For \textbf{Communication Interfaces}, we will be using the HTTP and TCP/IP protocol.
 
 \section{Use Cases}
 This section presents detailed use cases of our system.
