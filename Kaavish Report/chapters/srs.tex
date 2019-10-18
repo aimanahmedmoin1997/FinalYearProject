@@ -65,7 +65,7 @@ This section describes each function/feature provided by our system. These funct
 \subsection*{Module 7: Shop Handler}
 \begin{outline}
     \1 \textbf{Function 1: Registered clients can create a shop} \\
-    On account registration as a client, system responds with a page where client can create a shop. Shop handles all client data with regards to buying and selling products. The shop creation requires the client to enter an Address and Phone Number. The system verifies the shop upon admin approval, and clients can then start selling.
+    On account registration as a client, system responds with a page where client can create a shop. Shop handles all client data with regards to buying and selling products. The shop creation requires the client to enter a Name, Address and Phone Number. The system verifies the shop upon admin approval, and clients can then start selling.
     \1 \textbf{Function 2: Registered clients can change shop details} \\
     The client can change shop address and number through the shop portal inside their account. This cannot be done during an ongoing order on the current shop. Once all orders from the current shop are delivered, only then client can change shop details.
 \end{outline}
@@ -140,7 +140,14 @@ This section describes each function/feature provided by our system. These funct
 This section includes our mockup screens and briefly explains them.
 
 \subsection{Application Program Interface (API)}
-This section describes the library or API interface to our system.
+The APIs used for our system will be: 
+\begin{outline}
+    \1 Google Recommendations API (subject to change)
+    \1 Social Login
+    \1 Email Sender
+    \1 User Authentication API by PassportJS
+    \1 Facebook API
+\end{outline}
 
 \subsection{Hardware/Communication Interfaces}
 For \textbf{Hardware Interfaces}, the Web Application would require hardware used to connect to the internet. The Mobile Application would require hardware that supports Android Operating System and internet connectivity. \\ For \textbf{Communication Interfaces}, we will be using the HTTP and TCP/IP protocol.
@@ -152,4 +159,20 @@ This section presents detailed use cases of our system.
 This section describes the specific dataset(s) used to build our system. An appropriate snapshot of the dataset(s) is also included. Futher details, when needed, are presented in the appendix.
 
 \section{System Diagram}
-This diagram gives a high-level view of the different components of our system and the interactions between them. Each component and the particular tools/technologies/libraries used to build it are described.
+This diagram gives a high-level view of the different components of our system and the interactions between them.
+The tools and technologies to be used in the system are:
+\begin{outline}
+    \1 HTML/CSS/Javascript, React and Bootstrap for front-end
+    \1 JQuery, Nodejs, and its modules such as Expressjs and Passportjs for back-end
+    \1 MongoDB for database
+    \1 Amazon Web Services for hosting
+    \1 React native for mobile app development
+\end{outline}
+The module Registration and User Account Portal will be using Passportjs extensively for user authentication, maintaining user sessions and such. The other tools and technologies will be utilized by all modules across the board.
+    The system diagram for our system is placed on the next page.
+
+\begin{figure}
+  \caption{Lalalaala}
+  \includegraphics[width=\textwidth]{System_Diagram.png}
+  \centering
+\end{figure}
